@@ -39,7 +39,104 @@ a:hover {
 
 /* UI Event Classes */
 
-/* Jump animation on the interaction link */
+/* event 1 link */
+a:nth-of-type(1) {
+  position: relative;
+  transition: all .5s linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: visible;
+}
+
+a:nth-of-type(1)::after {
+  content: "Click";
+  position: absolute;
+  padding: 0.4em 0.8em;
+  left: 0;
+  top: 0;
+  border-radius: var(--pill);
+  background: var(--highlight-secondary);
+  color: var(--primary);
+  border: var(--primary);
+  font-weight: normal;
+  text-decoration: none;
+  transform: rotateY(180deg);
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate {
+  transform: rotateY(180deg);
+} 
+
+/* event 2 link */
+a:nth-of-type(2) {
+  position: relative;
+  background-image: linear-gradient( var(--secondary) 50%, var(--highlight-secondary) 50%);
+  transition:.5s ease-in-out;
+  background-size:100% 200%;
+  background-position: top;
+}
+
+/* event 3 & 4 link */
+a:nth-of-type(3) {
+  position: relative;
+  transition: .7s  ease-out;
+}
+
+.disappear {
+  rotate: 2.5turn;
+  scale: .001;
+  opacity: 0;
+}
+
+a:nth-of-type(4) {
+  position: relative;
+  transition: .7s  ease-out;
+}
+
+a:nth-of-type(4):hover {
+  scale: 1.2;
+}
+
+/* event 5 link */
+a:nth-of-type(5) {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  transition: 1s ease-in-out;
+}
+
+.loading {
+  top: 2rem !important;
+  opacity: 0 !important;
+  transition: 1s ease-in-out;
+}
+
+/* event 6 & 7 link */
+a:nth-of-type(6), a:nth-of-type(7) {
+  position: relative;
+  transition: all .5s linear;
+  -webkit-transform-style: preserve-3d;
+  -webkit-backface-visibility: hidden;
+}
+
+.vanish {
+  transform: rotateX(180deg);
+}
+
+a:nth-of-type(4) {
+  position: relative;
+  transition: .7s  ease-out;
+}
+
+a:nth-of-type(4):hover {
+  scale: 1.2;
+}
+
+
+
+
+/* event 12 link */
 a:nth-of-type(12) {
   position: relative;
   background: var(--highlight-secondary);
@@ -78,4 +175,3 @@ a:nth-of-type(12) {
   }
 }
 
-/* Jouw animaties */
